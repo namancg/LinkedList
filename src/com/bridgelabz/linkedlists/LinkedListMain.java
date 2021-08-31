@@ -12,20 +12,14 @@ public class LinkedListMain {
 		//myLinkedList.add(secondNode);
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(secondNode, firstNode);
-		//myLinkedList.printLinkedList();
-		INode delete=myLinkedList.deleteLast();
-		//System.out.println("AFTER DELETING:");
-		//myLinkedList.printLinkedList();
-		
-		/*if(myLinkedList.search(node) != null)
-		{
-			System.out.println("FOUND");
-		}
-		else
-			System.out.println("NOT FOUND");*/
-		
-		myLinkedList.insertWithKeyValue(node, nodeToBeInserted);
+		myLinkedList.insertWithKeyValue(node, nodeToBeInserted);;
+		INode deleteNode=myLinkedList.deleteWithKey(40);
 		myLinkedList.printLinkedList();
+		int size=myLinkedList.size();
+		myLinkedList.printLinkedList();
+		System.out.println(size);
+		
+		
 	
 }
 }
