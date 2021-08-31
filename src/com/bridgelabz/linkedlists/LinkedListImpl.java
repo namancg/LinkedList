@@ -68,15 +68,30 @@ public class LinkedListImpl {
 		this.tail.setNextNode(null);
 		return tempNode;
 	}
-	public <K> boolean search(K key)
+	public INode search(int key)
 	{
 		INode tempNode=head;
 		while(tempNode!=null) {
 			if(tempNode.getKey().equals(key)) {
-				return true;
+				return tempNode;
 					}
 			tempNode=tempNode.getNextNode();}
-		return false;
+		return tempNode;
+	}
+	public void insertWithKeyValue(int key, INode newNode)
+	{
+		INode nodeWithKeyValue = search(key);
+		if(nodeWithKeyValue.getKey().equals(key))
+		{
+			INode tempNode = nodeWithKeyValue.getNextNode();
+			nodeWithKeyValue.setNextNode(newNode);
+			newNode.setNextNode(tempNode);
+		}
+		else
+		{
+			System.out.println("Enter valid key");
+		}
+		
 	}
 	public void printLinkedList()
 	{
