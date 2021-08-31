@@ -93,6 +93,34 @@ public class LinkedListImpl {
 		}
 		
 	}
+	public INode deleteWithKey(int key)
+	{
+		INode nodeWithKeyValue = search(key);
+		if(nodeWithKeyValue !=null)
+		{
+			INode tempNode=head;
+			while (tempNode!=null && tempNode.getNextNode()!= nodeWithKeyValue)
+			{
+				tempNode=tempNode.getNextNode();
+			}
+			tempNode.setNextNode(nodeWithKeyValue.getNextNode());
+			return nodeWithKeyValue;}
+		else
+		{
+			return null;
+		}
+		
+	}
+	public int size()
+	{
+		int intialNumberOfNodes=0;
+		INode tempNode = this.head;
+		while(tempNode !=null)
+		{
+			tempNode =tempNode.getNextNode();
+			intialNumberOfNodes++;
+		}return intialNumberOfNodes;
+	}
 	public void printLinkedList()
 	{
 		System.out.println(head);
