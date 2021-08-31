@@ -11,5 +11,13 @@ public class LinkedListMain {
 		myLinkedList.add(thirdNode);
 		myLinkedList.printLinkedList();
 		
+		LinkedList<Integer> Node1 = new LinkedList<Integer>(56);
+		LinkedList<Integer> Node2 = new LinkedList<Integer>(30);
+		LinkedList<Integer> Node3 = new LinkedList<Integer>(70);
+		LinkedListImpl myLinkedList1= new LinkedListImpl();
+		myLinkedList1.append(Node1);
+		myLinkedList1.append(Node2);
+		myLinkedList1.append(Node3);
+		myLinkedList1.printLinkedList();
 	}
 }
