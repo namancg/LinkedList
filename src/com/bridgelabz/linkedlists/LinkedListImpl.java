@@ -26,6 +26,25 @@ public class LinkedListImpl {
 		}
 		
 	}
+	public void append(INode newNode)
+	{
+		if(this.head==null )
+		{
+			this.head=newNode;
+		}
+		if(this.tail==null)
+		{
+			this.tail=newNode;
+		}
+		else
+		{
+			INode tempNode1=this.head;
+			this.tail.setNextNode(newNode);
+			this.tail=newNode;
+			
+		}
+		
+	}
 	public void printLinkedList()
 	{
 		System.out.println(head);
