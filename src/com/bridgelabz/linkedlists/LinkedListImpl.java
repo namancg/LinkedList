@@ -45,6 +45,12 @@ public class LinkedListImpl {
 		}
 		
 	}
+	public void insert(INode newNode,INode prevNode)
+	{
+		INode tempNode=prevNode.getNextNode();
+		prevNode.setNextNode(newNode);
+		newNode.setNextNode(tempNode);
+	}
 	public void printLinkedList()
 	{
 		System.out.println(head);
