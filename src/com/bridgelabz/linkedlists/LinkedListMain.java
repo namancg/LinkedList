@@ -11,9 +11,10 @@ public class LinkedListMain {
 		myLinkedList.append(thirdNode);
 		myLinkedList.insert(secondNode, firstNode);
 		myLinkedList.printLinkedList();
-		INode delete=myLinkedList.delete();
+		INode delete=myLinkedList.deleteLast();
 		System.out.println("AFTER DELETING:");
 		myLinkedList.printLinkedList();
+		
 	
 }
 }
