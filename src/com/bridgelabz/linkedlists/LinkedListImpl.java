@@ -57,6 +57,17 @@ public class LinkedListImpl {
 		this.head=this.head.getNextNode();
 		return tempNode; 
 	}
+	public INode deleteLast() 
+	{
+		INode tempNode =head;
+		while(!tempNode.getNextNode().equals(tail)) {
+			tempNode = tempNode.getNextNode();
+		}
+		this.tail=tempNode;
+		tempNode=tempNode.getNextNode();
+		this.tail.setNextNode(null);
+		return tempNode;
+	}
 	public void printLinkedList()
 	{
 		System.out.println(head);
