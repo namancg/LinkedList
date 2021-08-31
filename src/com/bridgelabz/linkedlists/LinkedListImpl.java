@@ -68,6 +68,16 @@ public class LinkedListImpl {
 		this.tail.setNextNode(null);
 		return tempNode;
 	}
+	public <K> boolean search(K key)
+	{
+		INode tempNode=head;
+		while(tempNode!=null) {
+			if(tempNode.getKey().equals(key)) {
+				return true;
+					}
+			tempNode=tempNode.getNextNode();}
+		return false;
+	}
 	public void printLinkedList()
 	{
 		System.out.println(head);
