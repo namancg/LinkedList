@@ -15,6 +15,13 @@ public class LinkedListMain {
 		System.out.println("AFTER DELETING:");
 		myLinkedList.printLinkedList();
 		
+		if(myLinkedList.search(70)==true)
+		{
+			System.out.println("FOUND");
+		}
+		else
+			System.out.println("NOT FOUND");
+		
 	
 }
 }
