@@ -1,27 +1,44 @@
 package com.bridgelabz.linkedlists;
 
-public class LinkedList<K> {
+public class LinkedList<K> implements INode<K>{
 	private K key;
-	private LinkedList next;
+	private INode <K> next;
 	public LinkedList(K key)
 	{
 		this.key=key;
 		this.next=null;
 	}
-	public LinkedList getNextNode()
+	public INode<K> getNextNode()
 	{
 		return next;
 	}
-	public void setNextNode(LinkedList next)
+	public void setNextNode(INode next)
 	{
 		this.next=next;
 	}
-	public static void main(String[] args) {
-		LinkedList<Integer> firstNode = new LinkedList<Integer>(56);
-		LinkedList<Integer> secondNode = new LinkedList<Integer>(30);
-		LinkedList<Integer> thirdNode = new LinkedList<Integer>(70);
-		firstNode.setNextNode(secondNode);
-		secondNode.setNextNode(thirdNode);
+	public K getKey()
+	{
+		return key;
 	}
-
+	public void setKey(K key)
+	{
+		this.key=key;
+	}
+	public void setNext(INode next)
+	{
+		this.next=next;
+	}
+	public INode<K> getNext()
+	{
+		return next;
+	}
+	public String toString()
+	{
+		StringBuilder myNodeString=new StringBuilder();
+		myNodeString.append("{"+"Key=").append(key).append('}');
+		if(next!=null)
+		myNodeString.append("-->").append(next);
+		return myNodeString.toString();
+		
+	}
 }
